@@ -1,3 +1,5 @@
+from collections import defaultdict
+
 # Ingresar el texto con el que se trabajará
 texto = "El amor es una locura que ni el cura lo cura porque si el cura lo cura sería una locura del cura"
 
@@ -5,7 +7,7 @@ texto = "El amor es una locura que ni el cura lo cura porque si el cura lo cura 
 palabras = texto.split()
 
 # Crear un diccionario para almacenar los conteos
-conteo_palabras = {}
+conteo_palabras = defaultdict(int)
 
 # Definir algunas condiciones para cada palabra
 for palabra in palabras:
@@ -22,3 +24,4 @@ for palabra in palabras:
 # Imprimir el número de veces que cada palabra se repite
 for palabra, conteo in conteo_palabras.items():
     print(f"'{palabra}' se repite {conteo} veces.")
+
